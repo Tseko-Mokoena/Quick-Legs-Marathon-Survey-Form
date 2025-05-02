@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1 id="title">Quick Legs Marathon Survey Form</h1>
+    <p id="description">Thank you for taking the time to provide feedback on the marathon.</p>
+    <form id="survey-form">
+      <fieldset>
+        <label for="name" id="name-label">Name
+        <input id="name" type="text" placeholder="Name" required /></label>
+        <label for="email" id="email-label">Email
+        <input id="email" type="email" placeholder="Email" required /></label>
+        <label for="number" id="number-label">What position did you finish at?
+        <input id="number" type="number" min="1" max="200" placeholder="Position at end of race" /></label>
+      </fieldset>
+      <fieldset> <!-- Dropdown List -->
+        <label for="kilometers">How many kilometers did you participate in?
+          <select name="kilometers" id="dropdown" required>
+            <option value="">Select an option</option>
+            <option value="1">5km</option>
+            <option value="2">10km</option>
+            <option value="3">21km</option>
+          </select>
+        </label>
+      </fieldset>
+      <fieldset> <!-- Radio buttons -->
+          <label>Did you enjoy the marathon?</label>
+          <label for="yes"><input type="radio" name="marathon-fun" id="yes" value="yes" class="normalise" checked />Yes</label>
+          <label for="no"><input type="radio" name="marathon-fun" id="no" value="no" class="normalise" />No</label>
+      </fieldset>
+      <fieldset> <!-- Checkbox -->
+        <label>What did you like about this marathon?</label>
+        <label for="beverages"><input type="checkbox" id="beverages" name= "beverages" value="1" class="normalise" />Crowd Size</label>
+        <label for="after-party"><input type="checkbox" id="after-party" name="after-party" value="2" class="normalise" />After-race event</label>
+        <label for="prize-money"><input type="checkbox" id="prize-money" name="prize-money" value="3" class="normalise" />Prize Money<label> 
+      </fieldset>
+      <fieldset>
+        <label for="improvements">Any improvements you would like to see in future events?
+          <textarea id="improvements" name="improvements" rows="5" cols="30" placeholder="Enter your text here..."></textarea>
+        </label>
+      </fieldset>
+      <input type="submit" id="submit" value="Submit" />
+    </form>
+  </body>
+</html>
